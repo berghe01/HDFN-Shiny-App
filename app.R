@@ -127,13 +127,13 @@ server <- function(input, output) {
       
       geom_label(aes(x = input$day[1], y = input$hct+4, label = "Post-\nhct"), color = "black", fill = "pink") +
       geom_label(aes(x = input$day[2]-5, y = 30, label = "Severe anemia, \nHct 30% or below"), color = "black", fill = "white")+
-      geom_text(aes(x = input$day[2]-5, y = 51.5, label = "Target hct range: 40-50%"), color = "red")+
+      geom_text(aes(x = input$day[2]-5, y = 51.5, label = "Target hct range: 40-50%"), color = "red", check_overlap = TRUE)+
       theme_minimal() +
       theme(plot.title = element_text(size = 20),
             plot.subtitle = element_text(size = 17, face = "italic"),
             axis.text = element_text(size = 16),
             axis.title = element_text(size = 17),
-            plot.caption = element_text(size = 16, face = "italic", , color = "grey39"),
+            plot.caption = element_text(size = 16, face = "italic", color = "grey39"),
             legend.text = element_text(size = 16),
             legend.title = element_text(size = 16)) 
 
