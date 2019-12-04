@@ -37,11 +37,8 @@ ui <- fluidPage(
                    width = "300px"),
       
       sliderInput("day", "Select gestational age at procedure and future date (days)",
-<<<<<<< HEAD
+
                   min = 112, max = 245, 
-=======
-                  min = 0, max = 245, 
->>>>>>> 8d33ff60faf3d559916cda72adc06fe02dbb7145
                   value = c(140, 170))
     )
   ),
@@ -56,16 +53,12 @@ ui <- fluidPage(
     
     hr(),
     
-<<<<<<< HEAD
+
     tags$div(
       HTML(paste("Projections", tags$sup(1), " based on 0.1 (± 0.4)% and 1.06 (±0.68)% decrease in fetal hct per day with IVT+IPT vs. IVT alone, respectively", sep = "")) 
     ),
     
     h5("1. Moise Jr, Kenneth J., et al. Comparison of four types of intrauterine transfusion: effect on fetal hematocrit. Fetal Diagnosis and Therapy 4.2-3 (1989): 126-137.")
-=======
-    h5("Projections based on 0.1% and 1.06% decrease in fetal hct per day with IVT+IPT vs. IVT alone, respectively"),
-    h5("Reference: Moise Jr, Kenneth J., et al. Comparison of four types of intrauterine transfusion: effect on fetal hematocrit. Fetal Diagnosis and Therapy 4.2-3 (1989): 126-137.")
->>>>>>> 8d33ff60faf3d559916cda72adc06fe02dbb7145
   )
 )
 
@@ -99,11 +92,9 @@ server <- function(input, output) {
       xlim(input$day[1], input$day[2]) +
       
       labs(title = "Estimated hct decline per week post-transfusion, by method",
-<<<<<<< HEAD
+
            subtitle = "*Rate of decline may vary by degree to which fetal erythropoesis is suppressed",
-=======
-           subtitle = "Assumes near-complete supression of fetal erythropoesis",
->>>>>>> 8d33ff60faf3d559916cda72adc06fe02dbb7145
+
            x= "\nGestational age (days)",
            y = "Fetal Hct (%)",
            caption = 
@@ -139,15 +130,9 @@ server <- function(input, output) {
       geom_text(aes(x = input$day[2]-5, y = 51.5, label = "Target hct range: 40-50%"), color = "red")+
       theme_minimal() +
       theme(plot.title = element_text(size = 20),
-<<<<<<< HEAD
             plot.subtitle = element_text(size = 17, face = "italic"),
             axis.text = element_text(size = 16),
             axis.title = element_text(size = 17),
-=======
-            plot.subtitle = element_text(size = 18, face = "italic"),
-            axis.text = element_text(size = 16),
-            axis.title = element_text(size = 18),
->>>>>>> 8d33ff60faf3d559916cda72adc06fe02dbb7145
             plot.caption = element_text(size = 16, face = "italic", , color = "grey39"),
             legend.text = element_text(size = 16),
             legend.title = element_text(size = 16)) 
