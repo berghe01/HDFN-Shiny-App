@@ -53,6 +53,7 @@ ui <- fluidPage(
     
     hr(),
     
+    
 
     tags$div(
       HTML(paste("Projections", tags$sup(1), " based on 0.1 (± 0.4)% and 1.06 (±0.68)% decrease in fetal hct per day with IVT+IPT vs. IVT alone, respectively", sep = "")) 
