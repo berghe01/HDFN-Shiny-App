@@ -47,7 +47,7 @@ ui <- fluidPage(
   mainPanel(
     plotOutput(
       
-      "hct_plot", width = "85%"
+      "hct_plot", width = "100%"
       
     ),
     
